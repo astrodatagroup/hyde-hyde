@@ -4,6 +4,18 @@
     {{ if not .Date.IsZero }}
       <i class="fas fa-calendar-alt"></i> {{ .Date.Format (.Site.Params.dateformat | default "Jan 02, 2006") }}
     {{ end }}
+      <!-- categories -->
+    {{ with .Params.authors }}
+      {{ $total := len . }}
+      {{ if gt $total 0 }}
+          by
+          {{ $total := sub $total 1 }}
+          {{ range $i, $cat := sort . }}
+              <a class="badge badge-category" href="{{ "/authors/" | relURL }}{{ $cat | urlize }}">{{ $cat }}</a>
+              {{ if lt $i $total }}•{{ end }}
+          {{ end }}
+      {{ end }}
+    {{ end }}
     <!-- categories -->
     {{ with .Params.categories }}
       {{ $total := len . }}
