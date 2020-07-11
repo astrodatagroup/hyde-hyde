@@ -6,12 +6,13 @@
   text-align: center;
   a {
     color: $gray-1;
+    text-decoration: none;
     border: none;
     &:hover {
-      color: $link-color;
+      text-decoration: underline;
     }
     &:focus {
-      color: $link-color;
+      text-decoration: underline;
     }
   }
   .sidebar-about {
@@ -43,6 +44,7 @@
   margin-bottom: 0.5rem;
   a:hover {
     border: none;
+    text-decoration: none;
   }
 }
 
@@ -60,16 +62,16 @@
 }
 
 .img--circle {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 .img--headshot {
-	height: 115px;
-	width: 115px;
+  height: 115px;
+  width: 115px;
 }
 
 .img--caption {
-	font-style: italic;
+  font-style: italic;
 }
 
 %small-center-text {
@@ -80,9 +82,9 @@
 
 .copyright {
   padding-top: 1rem;
-	@extend %small-center-text;
+  @extend %small-center-text;
 }
 .builtwith {
-  padding-top: .2rem;
+  padding-top: 0.2rem;
   @extend %small-center-text;
 }
